@@ -53,7 +53,6 @@ func JokeHandler(c *gin.Context) {
 // LikeJoke increments the likes of a particular joke Item
 func LikeJoke(c *gin.Context) {
 	// confirm Joke ID sent is valid
-	// remember to import the `strconv` package
 	if jokeid, err := strconv.Atoi(c.Param("jokeID")); err == nil {
 		// find joke, and increment likes
 		for i := 0; i < len(jokes); i++ {
